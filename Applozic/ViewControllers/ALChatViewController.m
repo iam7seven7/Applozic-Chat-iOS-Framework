@@ -2353,35 +2353,35 @@
         [self openVideoCamera];
     }]];
 
-    if((!self.channelKey && !self.conversationId) || (self.alChannel.type == GROUP_OF_TWO))
-    {
-        [theController addAction:[UIAlertAction actionWithTitle:@"Block User" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            
-            if(![ALDataNetworkConnection checkDataNetworkAvailable])
-            {
-                [self showNoDataNotification];
-                return;
-            }
-            
-            ALUserService *userService = [ALUserService new];
-            [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
-                
-                if(userBlock)
-                {
-                    self.isUserBlocked = YES;
-                    [self.label setHidden:self.isUserBlocked];
-                    [self.typingLabel setHidden:self.isUserBlocked];
-                    NSString * alertText = [NSString stringWithFormat:@"%@ is blocked successfully", [self.alContact getDisplayName]];
-                    [ALUtilityClass showAlertMessage:alertText andTitle:@"USER BLOCK"];
-                }
-            }];
-        }]];
-    }
-    
-        [theController addAction:[UIAlertAction actionWithTitle:@"Share Contact" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            
-            [self openContactsView];
-        }]];
+//    if((!self.channelKey && !self.conversationId) || (self.alChannel.type == GROUP_OF_TWO))
+//    {
+//        [theController addAction:[UIAlertAction actionWithTitle:@"Block User" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            
+//            if(![ALDataNetworkConnection checkDataNetworkAvailable])
+//            {
+//                [self showNoDataNotification];
+//                return;
+//            }
+//            
+//            ALUserService *userService = [ALUserService new];
+//            [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
+//                
+//                if(userBlock)
+//                {
+//                    self.isUserBlocked = YES;
+//                    [self.label setHidden:self.isUserBlocked];
+//                    [self.typingLabel setHidden:self.isUserBlocked];
+//                    NSString * alertText = [NSString stringWithFormat:@"%@ is blocked successfully", [self.alContact getDisplayName]];
+//                    [ALUtilityClass showAlertMessage:alertText andTitle:@"USER BLOCK"];
+//                }
+//            }];
+//        }]];
+//    }
+//    
+//        [theController addAction:[UIAlertAction actionWithTitle:@"Share Contact" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            
+//            [self openContactsView];
+//        }]];
 
     [theController addAction:[UIAlertAction actionWithTitle:@"Photos/Videos" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
