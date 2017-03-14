@@ -2454,36 +2454,36 @@
         [self openVideoCamera];
     }]];
     
-    if((!self.channelKey && !self.conversationId) || (self.alChannel.type == GROUP_OF_TWO))
-    {
-        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"blockUserOption", nil, [NSBundle mainBundle], @"BLOCK USER", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            
-            if(![ALDataNetworkConnection checkDataNetworkAvailable])
-            {
-                [self showNoDataNotification];
-                return;
-            }
-            
-            ALUserService *userService = [ALUserService new];
-            [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
-                
-                if(userBlock)
-                {
-                    self.isUserBlocked = YES;
-                    [self.label setHidden:self.isUserBlocked];
-                    [self.typingLabel setHidden:self.isUserBlocked];
-                    NSString * alertText = [NSString stringWithFormat:[@"%@ " stringByAppendingString:NSLocalizedStringWithDefaultValue(@"blockedSuccessfullyText", nil, [NSBundle mainBundle], @"is blocked successfully", @"")], [self.alContact getDisplayName]];
-                    [ALUtilityClass showAlertMessage:alertText andTitle:NSLocalizedStringWithDefaultValue(@"userBlock", nil, [NSBundle mainBundle], @"USER BLOCK", @"")  ];
-                }
-            }];
-        }]];
-    }
-    
-    [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"shareContact", nil, [NSBundle mainBundle], @"Share Contact", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        [self openContactsView];
-    }]];
-    
+//    if((!self.channelKey && !self.conversationId) || (self.alChannel.type == GROUP_OF_TWO))
+//    {
+//        [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"blockUserOption", nil, [NSBundle mainBundle], @"BLOCK USER", @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            
+//            if(![ALDataNetworkConnection checkDataNetworkAvailable])
+//            {
+//                [self showNoDataNotification];
+//                return;
+//            }
+//            
+//            ALUserService *userService = [ALUserService new];
+//            [userService blockUser:self.contactIds withCompletionHandler:^(NSError *error, BOOL userBlock) {
+//                
+//                if(userBlock)
+//                {
+//                    self.isUserBlocked = YES;
+//                    [self.label setHidden:self.isUserBlocked];
+//                    [self.typingLabel setHidden:self.isUserBlocked];
+//                    NSString * alertText = [NSString stringWithFormat:[@"%@ " stringByAppendingString:NSLocalizedStringWithDefaultValue(@"blockedSuccessfullyText", nil, [NSBundle mainBundle], @"is blocked successfully", @"")], [self.alContact getDisplayName]];
+//                    [ALUtilityClass showAlertMessage:alertText andTitle:NSLocalizedStringWithDefaultValue(@"userBlock", nil, [NSBundle mainBundle], @"USER BLOCK", @"")  ];
+//                }
+//            }];
+//        }]];
+//    }
+//    
+//    [theController addAction:[UIAlertAction actionWithTitle: NSLocalizedStringWithDefaultValue(@"shareContact", nil, [NSBundle mainBundle], @"Share Contact", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        
+//        [self openContactsView];
+//    }]];
+
     [theController addAction:[UIAlertAction actionWithTitle:NSLocalizedStringWithDefaultValue(@"photosOrVideoOption", nil, [NSBundle mainBundle], @"Photos/Videos" , @"")  style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         UIStoryboard* storyboardM = [UIStoryboard storyboardWithName:@"Applozic" bundle:[NSBundle bundleForClass:ALChatViewController.class]];
