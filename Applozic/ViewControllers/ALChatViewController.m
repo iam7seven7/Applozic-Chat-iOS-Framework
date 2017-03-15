@@ -1995,6 +1995,8 @@
     }
     
     self.refresh = YES;
+
+    [self setCustomRepeatBackgroundWallpaper];
     [self setBackGroundWallpaper];
 }
 
@@ -2015,6 +2017,14 @@
     UIImageView * backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
     backgroundImageView.image = backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
+}
+
+- (void)setCustomRepeatBackgroundWallpaper
+{
+    [self.mTableView setBackgroundColor:[UIColor clearColor]];
+    UIView *bgView = [[UIView alloc] init];
+    bgView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern_bg"]];
+    self.mTableView.backgroundView = bgView;
 }
 
 //==============================================================================================================================================
