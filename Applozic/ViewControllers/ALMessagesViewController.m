@@ -140,6 +140,12 @@
     [_mTableView setBackgroundColor:[ALApplozicSettings getMessagesViewBackgroundColour]];
     [_navigationRightButton setTintColor:[ALApplozicSettings getColorForNavigationItem]];
     self.colourDictionary = [ALApplozicSettings getUserIconFirstNameColorCodes];
+    
+    // Custom right item style
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+                                                                                   target:self
+                                                                                   action:@selector(navigationRightButtonAction:)];
+    [self.navigationItem setRightBarButtonItem: barButtonItem];
 }
 
 -(void)loadMessages:(NSNotification *)notification
