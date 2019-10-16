@@ -30,7 +30,7 @@
 
 "userBlockedInfo" = "THIS USER IS BLOCKED BY YOU";
 
-"oppsText"  = "OOPS !!!";
+"oppsText"  = "OOPS";
 "unBlock"  = "UNBLOCK";
 
 "userUnBlock" = "USER UNBLOCK";
@@ -50,7 +50,7 @@
 
 "permissionPopMessageForCamera" = "Enable Camera Permission";
 
-"permissionNotAvailableMessageForCamera" = "Camera is not Available !!!";
+"permissionNotAvailableMessageForCamera" = "Camera is not Available";
 
 
 "permissionPopMessageForMicroPhone" = "Enable MicroPhone Permission";
@@ -96,10 +96,10 @@
 
 "emptyLabelProfileText" = "Profile Status";
 "alertText" = "Alert";
-"unableToUpdateText" ="Unable to update !!!";
-"notificationStatusUpdateText" = "Notification setting updated!!!";
+"unableToUpdateText" ="Unable to update";
+"notificationStatusUpdateText" = "Notification setting updated";
 
-"imageUpdatedText" = "Image Updated Successfully!!!";
+"imageUpdatedText" = "Image Updated Successfully";
 "profileTitleInfo" = "Profile";
 "profileStatusTitle" = "Profile Status";
 "notificationsTitle"= "Notifications";
@@ -117,7 +117,7 @@
 
 "doneText" = "DONE";
 
-"finishPlayingInfo" = "FINISH PLAYING !!!";
+"finishPlayingInfo" = "FINISH PLAYING";
 
 "messageText" = "Message";
 
@@ -134,7 +134,7 @@
 
 
 "cancelOptionText" = "Cancel";
-"cancelFailed"="Cancel failed !";
+"cancelFailed"="Cancel failed";
 
 "cancelText" = "cancel";
 
@@ -170,7 +170,7 @@
 "confirmText" = "Confirm";
 "areYouSureText" ="Are you sure?";
 "yes" = "Yes";
-"deleteFailed" = "Delete failed !";
+"deleteFailed" = "Delete failed";
 "unMuteGroup" = "Unmute Group";
 "addNewMember" = "Add New Member";
 "muteGroup" = "Mute Group";
@@ -202,9 +202,9 @@
 "groupNameEmptyAlertMessage" ="Please give the group name.";
 
 "youHaveNotUpdatedAnything" = "You haven't update anything";
-"wait" = "Wait!!!";
+"wait" = "Wait";
 "yourNotAparticipantOfGroupInfo" = "You are not a participant of this group";
-"unableToProcess"="Unable process !!!";
+"unableToProcess"="Unable process";
 
 //Map
 
@@ -254,7 +254,7 @@
 "pause" = "Pause";
 
 "recordAudioViewtitle" = "Record Audio";
-"imageUpdateText" ="Image Updated Successfully!!!";
+"imageUpdateText" ="Image Updated Successfully";
 "uploadOption" = "Upload";
 "adminText" = "Admin";
 "contact" = "Contact";
